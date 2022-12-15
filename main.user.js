@@ -9,8 +9,8 @@
 // @license      MIT
 // @supportURL   http://106.13.238.216:8888/discuss/639aef2c792e00b98da1b37e
 // @homepage     http://106.13.238.216:8888/discuss/639aef2c792e00b98da1b37e
-// @updateURL    https://fastly.jsdelivr.net/gh/hellolllllin/lysz-oj-beauty/.user.js
-// @downloadURL  https://fastly.jsdelivr.net/gh/hellolllllin/lysz-oj-beauty/.user.js
+// @updateURL    https://fastly.jsdelivr.net/gh/hellolllllin/lysz-oj-beauty/main.user.js
+// @downloadURL  https://fastly.jsdelivr.net/gh/hellolllllin/lysz-oj-beauty/main.user.js
 // ==/UserScript==
 
 /*
