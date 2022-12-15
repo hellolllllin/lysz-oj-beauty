@@ -1,12 +1,11 @@
 // ==UserScript==
 // @name         LYSZ-OJ Beauty
-// @namespace    http://tampermonkey.net/
-// @version      1.0.1
+// @namespace    https://github.com/hellolllllin/lysz-oj-beauty/
+// @version      1.1.0
 // @description  Say hello to the whole world!
 // @author       Hellolin
 // @match        *://106.13.238.216:8888
 // @match        *://106.13.238.216:8888/*
-// @grant        GM_addStyle
 // @license      MIT
 // @supportURL   http://106.13.238.216:8888/discuss/639aef2c792e00b98da1b37e
 // @homepage     http://106.13.238.216:8888/discuss/639aef2c792e00b98da1b37e
@@ -28,7 +27,30 @@
 
 (function() {
 'use strict';
-// Tip & Warn & Note
+// 强势入驻
+if (window.location.pathname==='/')
+{
+const parent=document.getElementsByClassName('section__body')[0]
+const heading=document.getElementById('%E8%BF%99%E9%87%8C%E6%98%AF%E4%B8%B4%E6%B2%82%E5%9B%9B%E4%B8%AD%E4%BF%A1%E6%81%AF%E5%AD%A6%E5%A5%A5%E8%B5%9B%E8%AF%84%E6%B5%8B%E5%B9%B3%E5%8F%B0')
+
+const insheading=document.createElement('h2')
+insheading.innerHTML=`已经安装了 LYSZ-OJ Beauty v1.1.0`
+const ins=document.createElement('h4')
+ins.innerHTML=`
+这个版本的更新内容：<br/><br/>
+1.更改了左上角的徽标，使其更加和谐；<br/><br/>
+2.写这个东西的人彻底放弃了 GSM；<br/><br/>
+3.上面加了个私信入口。<br/><br/>
+Under the MIT License. Copyright 2022 Hellolin <hellolinoi@outlook.com>.`
+const dlink=document.createElement('a')
+dlink.href="https://fastly.jsdelivr.net/gh/hellolllllin/lysz-oj-beauty/main.user.js"
+dlink.innerHTML=`手动检查更新`
+parent.insertBefore(dlink, heading)
+parent.insertBefore(ins, dlink)
+parent.insertBefore(insheading, ins)
+}
+
+// Tip & Warn & Note & Danger
 const a = document.createElement('style');
 a.innerHTML = `code{
     padding: .085rem .2315rem;
@@ -123,8 +145,20 @@ replacei.innerHTML=`
     background-image: url(/file/61/nav_logo_dark_2x.png) !important
     }
     }`
-// TODO: GitHub Style Markdown
+
+// 有趣的工具
+
+var l = document.getElementsByClassName("nav__list nav__list--main clearfix")[0];
+var li = document.createElement("li");
+li.className = "nav__list-item";
+var ad1 = document.createElement("a");
+ad1.href="/home/messages"; ad1.className="nav__item"; ad1.innerHTML="站内消息";
+li.appendChild(ad1);
+l.appendChild(li);
+
+// ! FAILED: GitHub Style Markdown
 // Hydro 自带的 Markdown 渲染事依托答辩
+
 
 // TODO: Rewrite submit record
 
