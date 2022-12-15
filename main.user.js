@@ -1,5 +1,6 @@
 // ==UserScript==
 // @name         LYSZ-OJ Beauty
+// @namespace    http://tampermonkey.net/
 // @version      1.0.1
 // @description  Say hello to the whole world!
 // @author       Hellolin
