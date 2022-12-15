@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         LYSZ-OJ Beauty
-// @version      1.0.0
+// @version      1.0.1
 // @description  Say hello to the whole world!
 // @author       Hellolin
 // @match        *://106.13.238.216:8888
