@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         LYSZ-OJ Beauty
 // @namespace    https://github.com/hellolllllin/lysz-oj-beauty/
-// @version      1.1.2
+// @version      1.2.0
 // @description  Say hello to the whole world!
 // @author       Hellolin
 // @match        *://106.13.238.216:8888
@@ -36,7 +36,7 @@
 
 ;(function () {
   'use strict'
-  const version = '1.1.3'
+  const version = '1.2.0'
   // 强势入驻
   console.log('  _  __   ______ _____   ___      _   ____                   _         ')
   console.log(' | | \\ \\ / / ___|__  /  / _ \\    | | | __ )  ___  __ _ _   _| |_ _   _ ')
@@ -59,8 +59,10 @@
       ann.innerHTML = `
 <h2>已经安装了 <b>LYSZ OJ Beauty</b> <small>v${version}</small></h1>
 <h3>这个版本的更新内容：</h3>
-1. 宽屏适配。<br/><br/>
-2. 修正了 Scoreboard 显示出错的问题。<br/><br/>
+1. 修正了宽屏显示问题。<br/><br/>
+2. 修正了代码块错误缩进问题。<br/><br/>
+3. 修正了用户资料图片无法正常显示的问题。<br/><br/>
+4. 1.4.0有大动作！^w^<br/><br/>
 <a href="https://fastly.jsdelivr.net/gh/hellolllllin/lysz-oj-beauty/main.user.js">手动检查更新</a><br/><br/>
 <pre>Copyright 2022 HelloLin hellolinoi@outlook.com. Under the <a href="https://mit-license.org">MIT License</a>.</pre>
 `
@@ -75,11 +77,7 @@
 
   // Tip & Warn & Note & Danger
   const a = document.createElement('style')
-  a.innerHTML = `code{
-    padding: .085rem .2315rem;
-    border-radius: .25rem;
-    background-color: #f8f8f8;
-  }
+  a.innerHTML = `
   blockquote{
     background-color: #f8f8f8;
     color: #666;
@@ -167,7 +165,7 @@
   document.head.append(style)
 
   // 简单的图
-  var replacei = document.body.getElementsByTagName('style')[0]
+  var replacei = document.createElement('style')
   replacei.innerHTML = `
     .nav__logo { background-image: url(/file/61/nav_logo_dark.png) !important }
     @media
@@ -178,6 +176,7 @@
     background-image: url(/file/61/nav_logo_dark_2x.png) !important
     }
     }`
+  document.body.appendChild(replacei)
 
   // 有趣的工具
 
